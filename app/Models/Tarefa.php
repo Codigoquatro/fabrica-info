@@ -18,4 +18,6 @@ class Tarefa extends Model
         'data_conclusao'
     ];
 
+    protected $guarded = [];
+
 }
