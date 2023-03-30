@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TarefaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,4 +15,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::resource('tarefa','TarefaController');
+//Route::resource('tarefa','TarefaController');
+//Route::get('/tarefa', [TarefaController::class, 'create']);
+Route::controller(TarefaController::class)->group(function () {
+    Route::get('/tarefa', 'create');
+    Route::post('/tarefa', 'store');
+});

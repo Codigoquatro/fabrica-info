@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
-use Laravel\Tarefa;
-use Laravel\Http\Request\TarefaFormRequest;
+use Laravel\App\Models\Tarefa;
+use App\Http\Requests\TarefaFormRequest;
 use DB;
 
 class TarefaController extends Controller
@@ -28,7 +28,7 @@ class TarefaController extends Controller
         }
     }
     public function create(){
-        return view("create");
+        return view('create');
     }
 
     public function store(TarefaFormRequest $request){
@@ -38,18 +38,18 @@ class TarefaController extends Controller
         $tarefa->data_conclusao=$request->get('data_conclusao');
         $tarefa->save();
 
-        return Redirect::to('store');        
+        return Redirect::to('store');
     }
 
     public function show($id){
         return view("show",[
-          "tarefa"=>Tarefa::findOrFail($id) 
+          "tarefa"=>Tarefa::findOrFail($id)
         ]);
     }
 
     public function edit(){
         return view("show",[
-            "tarefa"=>Tarefa::findOrFail($id) 
+            "tarefa"=>Tarefa::findOrFail($id)
           ]);
     }
 
