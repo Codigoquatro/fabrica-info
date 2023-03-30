@@ -24,3 +24,5 @@ Route::get('/tarefas', function () {
 Route::get('/tarefas/{id_tarefa}', function ($id) {
     return 'Tarefa = '.$id;
 });
+
+Route::resource('tarefa','TarefaController');
