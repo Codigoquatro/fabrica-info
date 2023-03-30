@@ -37,18 +37,29 @@ class TarefaController extends Controller
         $tarefa->data_conclusao=$request->get('data_conclusao');
         $tarefa->save();
 
-        
+        return Redirect::to('store');        
     }
-    public function show(){
-        
+
+    public function show($id){
+        return view("show",[
+          "tarefa"=>Tarefa::findOrFail($id) 
+        ]);
     }
+
     public function edit(){
-        
+        return view("show",[
+            "tarefa"=>Tarefa::findOrFail($id) 
+          ]);
     }
-    public function update(){
-        
+
+    public function update(TarefaFormRequest $request,$id){
+        $tarefa=Tarefa::findOrFail($id);
+        $tarefa->responsavel=$request->get('responsavel');
+        $tarefa->descricao=$request->get('descricao');
+        $tarefa->data_conclusao=$request->get('data_conclusao');
     }
     public function destroy(){
-        
+        $tarefa=Tarefa::findOrFail($id);
+        $tarefa->update();
     }
 }

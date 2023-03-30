@@ -13,16 +13,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return 'Sistema de Gestão de Tarefas';
-});
-
-Route::get('/tarefas', function () {
-    return 'Lista todas as Tarefas';
-});
-
-Route::get('/tarefas/{id_tarefa}', function ($id) {
-    return 'Tarefa = '.$id;
-});
 
 Route::resource('tarefa','TarefaController');
