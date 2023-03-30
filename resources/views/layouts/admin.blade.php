@@ -25,11 +25,11 @@
       <header class="main-header">
 
         <!-- Logo -->
-        <a href="index2.html" class="logo">
+        <a href="#" class="logo">
           <!-- mini logo for sidebar mini 50x50 pixels -->
-          <span class="logo-mini"><b>HV</b>V</span>
+          <span class="logo-mini"><b>Tarefa</b>T</span>
           <!-- logo for regular state and mobile devices -->
-          <span class="logo-lg"><b>HV - Vendas</b></span>
+          <span class="logo-lg"><b>Tarefas</b></span>
         </a>
 
         <!-- Header Navbar: style can be found in header.less -->
@@ -47,7 +47,7 @@
               <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   <small class="bg-red">Online</small>
-                  <span class="hidden-xs">Hugo Vasconcelos de Freitas</span>
+                  <span class="hidden-xs">Raynara</span>
                 </a>
                 <ul class="dropdown-menu">
                   <!-- User image -->
@@ -87,38 +87,16 @@
             <li class="treeview">
               <a href="#">
                 <i class="fa fa-laptop"></i>
-                <span>Estoque</span>
+                <span>Tarefas</span>
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="estoque/produto"><i class="fa fa-circle-o"></i> Produtos</a></li>
-                <li><a href="estoque/categoria"><i class="fa fa-circle-o"></i> Categorias</a></li>
+                <li><a href="tarefa"><i class="fa fa-circle-o"></i> Cadastrar Tarefa</a></li>
+                <li><a href="estoque/categoria"><i class="fa fa-circle-o"></i> Listar Tarefa</a></li>
+                <li><a href="estoque/categoria"><i class="fa fa-circle-o"></i> Atualizar Tarefa</a></li>
+                <li><a href="estoque/categoria"><i class="fa fa-circle-o"></i>Excluir Tarefa</a></li>
               </ul>
             </li>
-
-            <li class="treeview">
-              <a href="#">
-                <i class="fa fa-th"></i>
-                <span>Compras</span>
-                 <i class="fa fa-angle-left pull-right"></i>
-              </a>
-              <ul class="treeview-menu">
-                <li><a href="compras/entrada"><i class="fa fa-circle-o"></i> Entradas</a></li>
-                <li><a href="compras/fornecedor"><i class="fa fa-circle-o"></i> Fornecedores</a></li>
-              </ul>
-            </li>
-            <li class="treeview">
-              <a href="#">
-                <i class="fa fa-shopping-cart"></i>
-                <span>Vendas</span>
-                 <i class="fa fa-angle-left pull-right"></i>
-              </a>
-              <ul class="treeview-menu">
-                <li><a href="vendas/venda"><i class="fa fa-circle-o"></i> Vendas</a></li>
-                <li><a href="vendas/cliente"><i class="fa fa-circle-o"></i> Clientes</a></li>
-              </ul>
-            </li>
-
             <li class="treeview">
               <a href="#">
                 <i class="fa fa-folder"></i> <span>Login</span>
@@ -135,13 +113,6 @@
                 <small class="label pull-right bg-red">PDF</small>
               </a>
             </li>
-            <li>
-              <a href="#">
-                <i class="fa fa-info-circle"></i> <span>Sobre...</span>
-                <small class="label pull-right bg-yellow">IT</small>
-              </a>
-            </li>
-
           </ul>
         </section>
         <!-- /.sidebar -->
@@ -162,7 +133,7 @@
             <div class="col-md-12">
               <div class="box">
                 <div class="box-header with-border">
-                  <h3 class="box-title">Sistema de Vendas</h3>
+                  <h3 class="box-title">Gerenciador de Tarefas</h3>
                   <div class="box-tools pull-right">
                     <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
 

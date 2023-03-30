@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
-use Laravel\App\Models\Tarefa;
+use App\Models\Tarefa;
 use App\Http\Requests\TarefaFormRequest;
 use DB;
 
@@ -17,10 +17,10 @@ class TarefaController extends Controller
     public function index(Request $request){
         if ($request) {
             $query = trim($request->get('searchText'));
-            $tarefas=DB::table('tarefa')
+            $tarefas=DB::table('tarefas')
             ->where('responsavel','LIKE','%'.$query.'%')
-            ->whereorderBy('id_tarefa','desc')
-            ->paginate(7);
+            ->whereorderBy('id_tarefa','desc');
+           // ->paginate(7);
 
             return view('index',[
                 "tarefas"=>$tarefas,"searchText"=>$query
