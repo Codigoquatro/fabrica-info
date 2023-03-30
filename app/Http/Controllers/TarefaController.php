@@ -27,9 +27,10 @@ class TarefaController extends Controller
             ]);
         }
     }
-    public function create("create"){
-        
+    public function create(){
+        return view("create");
     }
+
     public function store(TarefaFormRequest $request){
         $tarefa = new Tarefa;
         $tarefa->nome=$request->get('responsavel');
