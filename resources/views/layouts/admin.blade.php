@@ -162,9 +162,9 @@
       <!--Fin-Contenido-->
       <footer class="main-footer">
         <div class="pull-right hidden-xs">
-          <b>Versão</b> 5.3.0
+          <b>Versão</b> 1.0.0
         </div>
-        <strong>Copyright &copy; 2015-2020 <a href="www.hugocursos.com.br">Q-Cursos</a>.</strong> Todos os direitos reservados.
+        <strong>Copyright &copy; 2023 <a href="www.hugocursos.com.br">Raynara</a>.</strong> Todos os direitos reservados.
       </footer>
 
 

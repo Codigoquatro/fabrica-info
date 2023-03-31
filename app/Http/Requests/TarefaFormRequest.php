@@ -24,6 +24,7 @@ class TarefaFormRequest extends FormRequest
     public function rules()
     {
         return [
+
             'responsavel'=>'required|max:256',
             'descricao'=>'max:256',
             'data_conclusao'=>'max:256'

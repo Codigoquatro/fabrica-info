@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use App\Models\Tarefa;
 use App\Http\Requests\TarefaFormRequest;
+
 use DB;
 
 class TarefaController extends Controller
@@ -17,7 +18,7 @@ class TarefaController extends Controller
     public function index(Request $request){
         if ($request) {
             $query = trim($request->get('searchText'));
-            $tarefas=DB::table('tarefas')
+            $tarefas=DB::table('tarefa')
             ->where('responsavel','LIKE','%'.$query.'%')
             ->whereorderBy('id_tarefa','desc');
            // ->paginate(7);
@@ -47,7 +48,7 @@ class TarefaController extends Controller
         ]);
     }
 
-    public function edit(){
+    public function edit($id){
         return view("show",[
             "tarefa"=>Tarefa::findOrFail($id)
           ]);
@@ -59,7 +60,7 @@ class TarefaController extends Controller
         $tarefa->descricao=$request->get('descricao');
         $tarefa->data_conclusao=$request->get('data_conclusao');
     }
-    public function destroy(){
+    public function destroy($id){
         $tarefa=Tarefa::findOrFail($id);
         $tarefa->update();
     }
