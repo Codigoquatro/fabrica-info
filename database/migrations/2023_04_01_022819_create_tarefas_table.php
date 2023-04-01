@@ -15,10 +15,11 @@ return new class extends Migration
     {
         Schema::create('tarefas', function (Blueprint $table) {
             $table->id();
-            $table->responsavel();
-            $table->descricao();
-            $table->data_conclusao();
+            $table->string('responsavel',60)->nullable();;
+            $table->string('descricao',60)->nullable();;
+            $table->dateTime('data_conclusão')->nullable();;
             $table->timestamps();
+
         });
     }
 

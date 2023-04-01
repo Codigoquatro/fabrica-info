@@ -19,5 +19,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::controller(TarefaController::class)->group(function () {
-    Route::get('/tarefas', 'create');
+    Route::get('/tarefas', 'index');
 });

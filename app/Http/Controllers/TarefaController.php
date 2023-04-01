@@ -14,19 +14,18 @@ class TarefaController extends Controller
     public function __construct(){
 
     }
-
     public function index(Request $request){
-        if ($request) {
-            $query = trim($request->get('searchText'));
-            $tarefas=DB::table('tarefa')
-            ->where('responsavel','LIKE','%'.$query.'%')
-            ->whereorderBy('id_tarefa','desc');
-           // ->paginate(7);
 
-            return view('index',[
-                "tarefas"=>$tarefas,"searchText"=>$query
-            ]);
-        }
+    	if($request){
+    		$query=trim($request->get('searchText'));
+    		$tarefas=DB::table('tarefas')
+    		->where('responsavel', 'LIKE', '%'.$query.'%')
+    		->orderBy('id', 'desc')
+    		->paginate(7);
+    		return view('index', [
+    			"tarefas"=>$tarefas, "searchText"=>$query
+    			]);
+    	}
     }
     public function create(){
         return view('create');
