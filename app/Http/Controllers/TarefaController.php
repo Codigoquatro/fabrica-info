@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\TarefaFormRequest;
 use App\Models\Tarefa as ModelsTarefa;
 use Illuminate\Http\Request;
 use fabricainfo\Tarefa;
 use Illuminate\Support\Facedes\Redirect;
-use fabricainfo\Http\Requests\TarefaFromRequest;
+use Http\Requests\TarefaFromRequest;
 use DB;
+use Redirect as GlobalRedirect;
 
 class TarefaController extends Controller
 {
@@ -31,28 +33,42 @@ class TarefaController extends Controller
     }
 
     public function create(){
-        return view('create');
+        return view('tarefa.create');
     }
 
-    public function store(){
+    public function store(TarefaFormRequest $request){
         $tarefa = new Tarefa;
         $tarefa->responsavel=$request->get('responsavel');
+        $tarefa->descricao=$request->get('descricao');
+        $tarefa->data_conclusao=1;
+        $tarefa->save();
+        return Redirect::to('tarefa.index');
+
 
     }
 
-    public function show(){
-
+    public function show($id_tarefa){
+        return view("tarefa.show",
+        ["tarefa"=>Tarefa::findOrFail($id_tarefa)]);
     }
 
-    public function edit(){
-
+    public function edit($id_tarefa){
+        return view("tarefa.edit",
+        ["tarefa"=>Tarefa::findOrFail($id_tarefa)]);
     }
 
-    public function update(){
-
+    public function update(TarefaFormRequest $request, $id_tarefa){
+        $tarefa=Tarefa::findOrFail($id);
+    	$tarefa->responsavel=$request->get('responsavel');
+    	$tarefa->descricao=$request->get('descricao');
+        $tarefa->descricao=$request->get('data_conclusao');
+    	$tarefa->update();
+    	return Redirect::to('tarefa.index');
     }
 
     public function destroy(){
-
+        $tarefa=Tarefa::findOrFail($id_tarefa);
+    	$tarefa->update();
+    	return Redirect::to('tarefa.index');
     }
 }
