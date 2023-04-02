@@ -33,7 +33,7 @@
 
             <div class="col-lg-6 col-sm-6 col-xs-12">
                 <div class="form-group">
-                <label>Descricao</label>
+                <label>Descrição</label>
                 <select name="id_descricao" class="form-control">
                     @foreach($tarefa as $cat)
                     <option value="{{$cat->id_descricao}}">
