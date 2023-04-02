@@ -38,7 +38,7 @@ class TarefaController extends Controller
         $tarefa->descricao=$request->get('descricao');
         $tarefa->data_conclusao=1;
         $tarefa->save();
-        return Redirect::to('index');
+        return Redirect::to('create');
 
 
     }
