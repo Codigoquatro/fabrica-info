@@ -16,4 +16,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::resource('tarefa', UserController::class);
+Route::resource('tarefa', TarefaController::class);
