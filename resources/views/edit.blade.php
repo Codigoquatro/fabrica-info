@@ -22,8 +22,8 @@
 
             	<div class="col-lg-6 col-sm-6 col-xs-12">
 	            	<div class="form-group">
-	            	<label for="nome">Responsavel</label>
-	            	<input type="text" name="responsavel" required value="{{$tarefa->responsavel}}" class="form-control" placeholder="Responsavel...">
+	            	<label for="nome">Responsável</label>
+	            	<input type="text" name="responsavel" required value="{{$tarefa->responsavel}}" class="form-control" placeholder="Responsável...">
 	            	</div>
             	</div>
 
@@ -31,7 +31,7 @@
 
             	<div class="col-lg-6 col-sm-6 col-xs-12">
             		<div class="form-group">
-            		<label>Descricao</label>
+            		<label>Descrição</label>
             		<select name="id_descricao" class="form-control">
 	            		@foreach($descricao as $cat)
 	            			@if($cat->id_descricao==$descricao->id_descricao)
@@ -53,8 +53,8 @@
 
             	<div class="col-lg-6 col-sm-6 col-xs-12">
             		<div class="form-group">
-	            	<label for="codigo">Data Conclusao</label>
-	            	<input type="text" name="data conclusao" required value="{{$produto->codigo}}" class="form-control" placeholder="Data Conclusao...">
+	            	<label for="codigo">Data Conclusão</label>
+	            	<input type="text" name="data conclusao" required value="{{$produto->codigo}}" class="form-control" placeholder="Data Conclusão...">
 	            	</div>
 
             	</div>
