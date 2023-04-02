@@ -5,10 +5,6 @@ use Illuminate\Http\Request;
 use App\Models\Tarefa;
 use Illuminate\Support\Facades\Redirect;
 use App\Http\Requests\TarefaFormRequest;
-use App\Models\Tarefa as ModelsTarefa;
-use Illuminate\Http\Request;
-use fabricainfo\Tarefa;
-use Illuminate\Support\Facedes\Redirect;
 use Http\Requests\TarefaFromRequest;
 use DB;
 class TarefaController extends Controller
