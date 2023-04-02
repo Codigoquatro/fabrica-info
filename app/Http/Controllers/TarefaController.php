@@ -36,6 +36,7 @@ class TarefaController extends Controller
 
     public function store(){
         $tarefa = new Tarefa;
+        $tarefa->responsavel=$request->get('responsavel');
 
     }
 
