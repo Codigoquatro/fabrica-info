@@ -6,7 +6,7 @@
 	</div>
 		
 </div>
-@stop
+
 
 @section('conteudo')
 <div class="row">
@@ -36,4 +36,4 @@
 	
 	</div>
 </div>
-
+@stop
