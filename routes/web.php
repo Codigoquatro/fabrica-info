@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\TarefaController;
+use Illuminate\Http\Request;
+use Illuminate\Routing\Route as RoutingRoute;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,8 +19,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('index');
-});
+})->name('app.index');
 
-Route::get('/tarefa/create', function () {
+Route::get('/create', function (Request $request) {
     return view('create');
-});
+})->name('app.create');
