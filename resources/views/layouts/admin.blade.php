@@ -91,27 +91,12 @@
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="tarefa"><i class="fa fa-circle-o"></i> Cadastrar Tarefa</a></li>
-                <li><a href="estoque/categoria"><i class="fa fa-circle-o"></i> Listar Tarefa</a></li>
+                <li><a href="{{route('app.create')}}"><i class="fa fa-circle-o"></i> Cadastrar Tarefa</a></li>
+                <li><a href="{{route('app.index')}}"><i class="fa fa-circle-o"></i> Listar Tarefa</a></li>
                 <li><a href="estoque/categoria"><i class="fa fa-circle-o"></i> Atualizar Tarefa</a></li>
                 <li><a href="estoque/categoria"><i class="fa fa-circle-o"></i>Excluir Tarefa</a></li>
-              </ul>
-            </li>
-            <li class="treeview">
-              <a href="#">
-                <i class="fa fa-folder"></i> <span>Login</span>
-                <i class="fa fa-angle-left pull-right"></i>
-              </a>
-              <ul class="treeview-menu">
-                <li><a href="configuracao/usuario"><i class="fa fa-circle-o"></i> Usuarios</a></li>
 
               </ul>
-            </li>
-             <li>
-              <a href="#">
-                <i class="fa fa-plus-square"></i> <span>Ajuda</span>
-                <small class="label pull-right bg-red">PDF</small>
-              </a>
             </li>
           </ul>
         </section>
