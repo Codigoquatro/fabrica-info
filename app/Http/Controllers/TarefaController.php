@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Tarefa as ModelsTarefa;
 use Illuminate\Http\Request;
 use fabricainfo\Tarefa;
 use Illuminate\Support\Facedes\Redirect;
@@ -34,6 +35,7 @@ class TarefaController extends Controller
     }
 
     public function store(){
+        $tarefa = new Tarefa;
 
     }
 
