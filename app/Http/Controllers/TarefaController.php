@@ -22,7 +22,7 @@ class TarefaController extends Controller
             ->where('descricao','=','1')
             ->orderBy('id_tarefa','desc')
             ->paginate('7');
-            return view('tarefa',[
+            return view('index',[
                 "tarefa"=>$tarefa, "searchText"=>$query
             ]);
         }
