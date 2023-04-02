@@ -14,7 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::create('tarefas', function (Blueprint $table) {
-            $table->id();
+            $table->id_tarefa();
+            $table->string('responsavel');
             $table->timestamps();
         });
     }

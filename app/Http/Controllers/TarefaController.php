@@ -29,7 +29,7 @@ class TarefaController extends Controller
     }
 
     public function create(){
-        return view('tarefa.create');
+        return view('create');
     }
 
     public function store(TarefaFormRequest $request){
@@ -38,13 +38,13 @@ class TarefaController extends Controller
         $tarefa->descricao=$request->get('descricao');
         $tarefa->data_conclusao=1;
         $tarefa->save();
-        return Redirect::to('tarefa.index');
+        return Redirect::to('index');
 
 
     }
 
     public function show($id_tarefa){
-        return view("tarefa.show",
+        return view("show",
         ["tarefa"=>Tarefa::findOrFail($id_tarefa)]);
     }
 
@@ -65,6 +65,6 @@ class TarefaController extends Controller
     public function destroy(){
         $tarefa=Tarefa::findOrFail($id_tarefa);
     	$tarefa->update();
-    	return Redirect::to('tarefa.index');
+    	return Redirect::to('index');
     }
 }
