@@ -16,4 +16,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::resource('tarefa', 'TarefaController');
+Route::controller(TarefaController::class)->group(function () {
+    Route::get('/', 'index');
+    Route::post('/novo', 'create');
+});
+
