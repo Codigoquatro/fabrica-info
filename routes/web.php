@@ -18,6 +18,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::controller(TarefaController::class)->group(function () {
     Route::get('/', 'index');
-    Route::post('/novo', 'create');
+    Route::get('/novo', 'create');
 });
 
