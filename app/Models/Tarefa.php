@@ -17,6 +17,7 @@ class Tarefa extends Model
     'responsavel',
     'descricao',
     'data_conclusao'    
+    
     ];
 
     protected $guarded = [];
