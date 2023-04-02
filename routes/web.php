@@ -16,8 +16,9 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
-Route::controller(TarefaController::class)->group(function () {
-    Route::get('/tarefas', 'index');
+
+Route::get('/tarefa/create', function () {
+    return view('create');
 });
