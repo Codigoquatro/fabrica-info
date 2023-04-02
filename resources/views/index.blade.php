@@ -17,12 +17,12 @@
 					<th>Descrição</th>
 					<th>Data Conclusão</th>
 				</thead>
-               @foreach ($tarefas as $ta)
+              
 				<tr>
-					<td>{{ $ta->id_tarefa}}</td>
-					<td>{{ $ta->responsavel}}</td>
-					<td>{{ $ta->descricao}}</td>
-                    <td>{{ $ta->data_conclusao}}</td>
+					<td></td>
+					<td></td>
+					<td></td>
+                    <td></td>
 					<td>
 						<a href="#"><button class="btn btn-info">Editar</button></a>
                          <a href="#" data-target="#" data-toggle="modal"><button class="btn btn-danger">Excluir</button></a>
