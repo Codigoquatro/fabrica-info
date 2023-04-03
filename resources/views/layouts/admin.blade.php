@@ -91,7 +91,7 @@
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="create"><i class="fa fa-circle-o"></i> Cadastrar Tarefa</a></li>
+                <li><a href="/resources/views/create.blade.php"><i class="fa fa-circle-o"></i> Cadastrar Tarefa</a></li>
                 <li><a href="index"><i class="fa fa-circle-o"></i> Listar Tarefa</a></li>
                 <li><a href="tarefa/{tarefa}/edit"><i class="fa fa-circle-o"></i> Atualizar Tarefa</a></li>
                 <li><a href="tarefa/{tarefa}"><i class="fa fa-circle-o"></i>Excluir Tarefa</a></li>
