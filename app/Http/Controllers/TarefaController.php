@@ -16,7 +16,11 @@ class TarefaController extends Controller
 
         if($request){
             $query=trim($request->get('seachText'));
-            $tarefa=DB::table('tarefa');
+            $tarefa=Tarefa::all()
+            ->where('responsavel','LIKE', '%'.$query.'%')
+            ->where('descricao','=','1')
+            ->orderBy('id_tarefa','desc')
+            ->paginate('7');
             return view('index',[
                 "tarefa"=>$tarefa, "searchText"=>$query
             ]);
