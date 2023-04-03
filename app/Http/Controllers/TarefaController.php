@@ -64,8 +64,10 @@ class TarefaController extends Controller
     }
 
     public function destroy(){
-        $tarefa=Tarefa::findOrFail($id_tarefa);
-    	$tarefa->update();
+        $cat=Tarefa::find($id_tarefa);
+    	if (isset($cat)) {
+            $cat->etlet();
+        }
     	return Redirect::to('index');
     }
 }
