@@ -20,7 +20,7 @@
 					<th>Descrição</th>
 					<th>Opções</th>
 				</thead>
-               @foreach ($tarefas as $cat)
+               @foreach ($tarefa as $cat)
 				<tr>
 					<td>{{ $cat->id_tarefa}}</td>
 					<td>{{ $cat->responsavel}}</td>
@@ -35,7 +35,7 @@
 			@endforeach
 			</table>
 		</div>
-		{{$tarefas->render()}}
+		{{$tarefa->render()}}
 	</div>
 </div>
 @stop
