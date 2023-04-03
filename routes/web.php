@@ -17,8 +17,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/tarefa', [TarefaController::class, 'index']);
-Route::get('/tarefa/novo', [TarefaController::class, 'create']);
+Route::get('/',TarefaController::class,'index');
 
 
 
