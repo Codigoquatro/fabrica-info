@@ -1,55 +1,19 @@
 @extends('layouts.admin')
 @section('conteudo')
-<div class="row">
-		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-			<h3>Editar Tarefa: {{ $cat->id_tarefa}}</h3>
-			@if (count($errors)>0)
-			<div class="alert alert-danger">
-				<ul>
-				@foreach ($errors->all() as $error)
-					<li>{{$error}}</li>
-				@endforeach
-				</ul>
-			</div>
-			@endif
-		</div>
+<div class="card border">
+    <div class="card-body">
+        <form action="/categorias/{{$cat->id}}" method="POST">
+            @csrf
+            <div class="form-group">
+                <label for="nomeCategoria">Nome da Categoria</label>
+                <input type="text" class="form-control" name="nomeCategoria" value="{{$cat->nome}}"
+                       id="nomeCategoria" placeholder="Categoria">
+            </div>
+            <button type="submit" class="btn btn-primary btn-sm">Salvar</button>
+            <button type="cancel" class="btn btn-danger btn-sm">Cancel</button>
+        </form>
+    </div>
 </div>
 
-			{!!Form::model($cat ['method'=>'PATCH', 'route'=>['tarefa.update', $cat->id_tarefa], 'files'=>'true'])!!}
-			{{Form::token()}}
-
-           <div class="row">
-
-            	<div class="col-lg-6 col-sm-6 col-xs-12">
-	            	<div class="form-group">
-	            	<label for="nome">Responsável</label>
-	            	<input type="text" name="responsavel" required value="{{$cat->responsavel}}" class="form-control" placeholder="Responsável...">
-	            	</div>
-            	</div>
-
-                <div class="col-lg-6 col-sm-6 col-xs-12">
-	            	<div class="form-group">
-	            	<label for="nome">Descrição</label>
-	            	<input type="text" name="descricao" required value="{{$cat->descricao}}" class="form-control" placeholder="Descrição...">
-	            	</div>
-            	</div>
-
-
-
-
-
-            	<div class="col-lg-6 col-sm-6 col-xs-12">
-            		<div class="form-group">
-	            	<label for="codigo">Data Conclusão</label>
-	            	<input type="text" name="data conclusao" required value="{{$cat->data_conclusao}}" class="form-control" placeholder="Data Conclusão...">
-	            	</div>
-
-            	</div>
-
-
-            	</div>
-
-            	</div>
-
-            </div>
+@endsection
 
