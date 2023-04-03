@@ -36,9 +36,9 @@ class TarefaController extends Controller
         $tarefa = new Tarefa;
         $tarefa->responsavel=$request->get('responsavel');
         $tarefa->descricao=$request->get('descricao');
-        $tarefa->data_conclusao=1;
+        $tarefa->data_conclusao=$request->get('data_conclusao');
         $tarefa->save();
-        return Redirect::to('create');
+        return Redirect::to('novo');
 
 
     }

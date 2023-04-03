@@ -15,9 +15,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+/*
 Route::controller(TarefaController::class)->group(function () {
     Route::get('/', 'index');
-    Route::get('/novo', 'create');
+    Route::post('/novo', 'store');
 });
-
+*/
+Route::resource('novo', TarefaController::class);
