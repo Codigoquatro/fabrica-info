@@ -29,13 +29,8 @@
             	<button class="btn btn-primary" type="submit">Salvar</button>
             	<button class="btn btn-danger" type="reset">Cancelar</button>
             </div>
-
-			{!!Form::close()!!}
-
 		</div>
 	</div>
-
-
             	<label for="data_conclusao">Data Conclusão</label>
             	<input type="date" name="data_conclusao" class="form-control" placeholder="Data Conclusão...">
             </div>
