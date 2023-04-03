@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\TarefaController;
 use Illuminate\Http\Request;
-use Illuminate\Routing\Route as RoutingRoute;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,7 +21,4 @@ Route::controller(TarefaController::class)->group(function () {
     Route::post('/novo', 'store');
 });
 */
-Route::get('/', function () {
-    return view('index');
-
-});
+Route::get('/tarefa',[TarefaController::class,'index']);
