@@ -28,7 +28,7 @@
                     <td>{{ $cat->data_conclusao}}</td>
 					<td>
                         <a href="/tarefa/{{$cat->id_tarefa}}/edit" class="btn btn-sm btn-primary">Editar</a>
-                        <a href="/tarefa/{tarefa}" class="btn btn-sm btn-danger">Apagar</a>
+                        <a href="#" class="btn btn-sm btn-danger">Apagar</a>
 					</td>
 				</tr>
 
