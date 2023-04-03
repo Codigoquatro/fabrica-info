@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/tarefa', [UserController::class, 'index']);
+Route::get('/tarefa', [TarefaController::class, 'index']);
 
 
 
