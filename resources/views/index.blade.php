@@ -27,8 +27,8 @@
 					<td>{{ $cat->descricao}}</td>
                     <td>{{ $cat->data_conclusao}}</td>
 					<td>
-						<a href="#"><button class="btn btn-info">Editar</button></a>
-                         <a href="#" data-target="#modal-delete-{{$cat->id_tarefa}}" data-toggle="modal"><button class="btn btn-danger">Excluir</button></a>
+						<a href="{{URL::action('TarefaController@edit',$cat->id_tarefa)}}"><button class="btn btn-info">Editar</button></a>
+                         <a href="" data-target="#modal-delete-{{$cat->idcategoria}}" data-toggle="modal"><button class="btn btn-danger">Excluir</button></a>
 					</td>
 				</tr>
 

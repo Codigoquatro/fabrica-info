@@ -15,7 +15,7 @@
 		</div>
 </div>
 
-			{!!Form::model($tarefa, ['method'=>'PATCH', 'route'=>['tarefa.update', $tarefa->idtarefa], 'files'=>'true'])!!}
+			{!!Form::model($tarefa, ['method'=>'PATCH', 'route'=>['tarefa.update', $tarefa->id_tarefa], 'files'=>'true'])!!}
 			{{Form::token()}}
 
            <div class="row">
@@ -27,34 +27,21 @@
 	            	</div>
             	</div>
 
-
-
-            	<div class="col-lg-6 col-sm-6 col-xs-12">
-            		<div class="form-group">
-            		<label>Descrição</label>
-            		<select name="id_descricao" class="form-control">
-	            		@foreach($descricao as $cat)
-	            			@if($cat->id_descricao==$descricao->id_descricao)
-	            			<option value="{{$cat->id_descricao}}" selected>
-	            			{{$cat->nome}}
-	            			</option>
-	            			@else
-	            			<option value="{{$cat->id_descricao}}">
-	            			{{$cat->nome}}
-	            			</option>
-	            			@endif
-	            		@endforeach
-            		</select>
-            		</div>
-
+                <div class="col-lg-6 col-sm-6 col-xs-12">
+	            	<div class="form-group">
+	            	<label for="nome">Descrição</label>
+	            	<input type="text" name="descrisao" required value="{{$tarefa->descricao}}" class="form-control" placeholder="Descrição...">
+	            	</div>
             	</div>
+
+
 
 
 
             	<div class="col-lg-6 col-sm-6 col-xs-12">
             		<div class="form-group">
 	            	<label for="codigo">Data Conclusão</label>
-	            	<input type="text" name="data conclusao" required value="{{$produto->codigo}}" class="form-control" placeholder="Data Conclusão...">
+	            	<input type="text" name="data conclusao" required value="{{$tarefa->data_conclusao}}" class="form-control" placeholder="Data Conclusão...">
 	            	</div>
 
             	</div>
