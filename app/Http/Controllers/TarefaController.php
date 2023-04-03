@@ -50,7 +50,7 @@ class TarefaController extends Controller
     public function edit($id_tarefa){
         $cat = Tarefa::find($id_tarefa);
         if(isset($cat)) {
-            return view('tarefa/{id_tarefa}/edit', compact('cat'));
+            return view('edit', compact('cat'));
         }
     }
 
