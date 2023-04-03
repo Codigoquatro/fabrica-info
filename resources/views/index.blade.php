@@ -4,7 +4,7 @@
 	<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
 		<h3>Lista de Tarefas <a href="tarefa.create"><button class="btn btn-success">Novo</button></a></h3>
 	</div>
-		
+
 </div>
 
 
@@ -19,7 +19,7 @@
 					<th>Descrição</th>
 					<th>Data Conclusão</th>
 				</thead>
-              
+
 				<tr>
 					<td></td>
 					<td></td>
@@ -33,7 +33,7 @@
 
 			</table>
 		</div>
-	
+
 	</div>
 </div>
 @stop
