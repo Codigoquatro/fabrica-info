@@ -31,8 +31,8 @@
                          <a href="" data-target="#modal-delete-{{$cat->id_tarefa}}" data-toggle="modal"><button class="btn btn-danger">Excluir</button></a>
 					</td>
 				</tr>
-				@include('modal')
-				@endforeach
+
+			@endforeach
 			</table>
 		</div>
 		{{$tarefas->render()}}
