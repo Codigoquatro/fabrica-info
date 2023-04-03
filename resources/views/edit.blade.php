@@ -6,7 +6,7 @@
             @csrf
             <div class="form-group">
                 <label for="nomeCategoria">Nome da Categoria</label>
-                <input type="text" class="form-control" name="nomeCategoria" value="{{$cat->nome}}"
+                <input type="text" class="form-control" name="nomeCategoria" value="{{$cat->responsavel}}"
                        id="nomeCategoria" placeholder="Categoria">
             </div>
             <button type="submit" class="btn btn-primary btn-sm">Salvar</button>
