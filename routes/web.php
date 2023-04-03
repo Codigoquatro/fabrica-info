@@ -16,8 +16,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::controller(TarefaController::class)->group(function () {
-    Route::get('/', 'index');
-    Route::get('/novo', 'create');
-});
+Route::resource('tarefa', 'CategoriaController');
 
