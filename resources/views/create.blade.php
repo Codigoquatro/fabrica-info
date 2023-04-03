@@ -30,11 +30,11 @@
             	<button class="btn btn-danger" type="reset">Cancelar</button>
             </div>
 
-			{!!Form::close()!!}		
-            
+			{!!Form::close()!!}
+
 		</div>
 	</div>
-@stop
+
 
             	<label for="data_conclusao">Data Conclusão</label>
             	<input type="date" name="data_conclusao" class="form-control" placeholder="Data Conclusão...">
