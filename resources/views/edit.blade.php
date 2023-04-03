@@ -15,7 +15,7 @@
 		</div>
 </div>
 
-			{!!Form::model($tarefa, ['method'=>'PATCH', 'route'=>['tarefa.update', $tarefa->id_tarefa], 'files'=>'true'])!!}
+			{!!Form::model($tarefa, ['method'=>'PATCH', 'route'=>['tarefa.update', $cat->id_tarefa], 'files'=>'true'])!!}
 			{{Form::token()}}
 
            <div class="row">
@@ -23,14 +23,14 @@
             	<div class="col-lg-6 col-sm-6 col-xs-12">
 	            	<div class="form-group">
 	            	<label for="nome">Responsável</label>
-	            	<input type="text" name="responsavel" required value="{{$tarefa->responsavel}}" class="form-control" placeholder="Responsável...">
+	            	<input type="text" name="responsavel" required value="{{$cat->responsavel}}" class="form-control" placeholder="Responsável...">
 	            	</div>
             	</div>
 
                 <div class="col-lg-6 col-sm-6 col-xs-12">
 	            	<div class="form-group">
 	            	<label for="nome">Descrição</label>
-	            	<input type="text" name="descricao" required value="{{$tarefa->descricao}}" class="form-control" placeholder="Descrição...">
+	            	<input type="text" name="descricao" required value="{{$cat->descricao}}" class="form-control" placeholder="Descrição...">
 	            	</div>
             	</div>
 
@@ -41,7 +41,7 @@
             	<div class="col-lg-6 col-sm-6 col-xs-12">
             		<div class="form-group">
 	            	<label for="codigo">Data Conclusão</label>
-	            	<input type="text" name="data conclusao" required value="{{$tarefa->data_conclusao}}" class="form-control" placeholder="Data Conclusão...">
+	            	<input type="text" name="data conclusao" required value="{{$cat->data_conclusao}}" class="form-control" placeholder="Data Conclusão...">
 	            	</div>
 
             	</div>
