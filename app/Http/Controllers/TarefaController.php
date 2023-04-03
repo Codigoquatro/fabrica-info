@@ -28,7 +28,7 @@ class TarefaController extends Controller
     }
 
     public function create(){
-        return view('tarefa/create');
+        return view('tarefa.create');
     }
 
     public function store(TarefaFormRequest $request){
