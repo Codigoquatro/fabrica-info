@@ -65,6 +65,6 @@ class TarefaController extends Controller
     public function destroy($id_tarefa){
         Tarefa::find($id_tarefa)->delete();
 
-        return redirect('/tarefa');
+        return redirec()->route('/tarefa');
     }
 }
