@@ -2,7 +2,7 @@
 @section('conteudo')
 <div class="card border">
     <div class="card-body">
-        <form action="tarefa/" method="POST">
+        <form action="tarefa" method="POST">
             @csrf
             <div class="form-group">
                 <label for="Responsavel">Responsável</label>
