@@ -13,17 +13,19 @@
 			</div>
 			@endif
 
-			{!!Form::open(array('url'=>'estoque/categoria','method'=>'POST','autocomplete'=>'off'))!!}
+			{!!Form::open(array('url'=>'create','method'=>'POST','autocomplete'=>'off'))!!}
             {{Form::token()}}
             <div class="form-group">
-            	<label for="nome">Nome</label>
-            	<input type="text" name="nome" class="form-control" placeholder="Nome...">
+            	<label for="responsavel">Responsável</label>
+            	<input type="text" name="responsavel" class="form-control" placeholder="Responsável...">
+
             </div>
             <div class="form-group">
             	<label for="descricao">Descrição</label>
             	<input type="text" name="descricao" class="form-control" placeholder="Descrição...">
             </div>
             <div class="form-group">
+
             	<button class="btn btn-primary" type="submit">Salvar</button>
             	<button class="btn btn-danger" type="reset">Cancelar</button>
             </div>
@@ -33,3 +35,19 @@
 		</div>
 	</div>
 @stop
+
+            	<label for="data_conclusao">Data Conclusão</label>
+            	<input type="date" name="data_conclusao" class="form-control" placeholder="Data Conclusão...">
+            </div>
+
+            <div class="form-group">
+            	<button class="btn btn-primary" type="submit">Salvar</button>
+            	<button class="btn btn-danger" type="reset">Cancelar</button>
+            </div>
+
+			{!!Form::close()!!}
+
+		</div>
+	</div>
+@stop
+
