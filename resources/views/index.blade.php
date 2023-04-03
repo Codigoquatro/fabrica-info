@@ -27,8 +27,8 @@
 					<td>{{ $cat->descricao}}</td>
                     <td>{{ $cat->data_conclusao}}</td>
 					<td>
-                        <a href="{{url(tarefa/{{$cat->id_tarefa}}/edit)}}" class="btn btn-sm btn-primary">Editar</a>
-                        <a href="{{url(tarefa/{{$cat->id_tarefa}})}}" class="btn btn-sm btn-danger">Apagar</a>
+                        <a href="/tarefa/{{$cat->id_tarefa}}/edit" class="btn btn-sm btn-primary">Editar</a>
+                        <a href="/tarefa/{{$cat->id_tarefa}}" class="btn btn-sm btn-danger">Apagar</a>
 					</td>
 				</tr>
 
