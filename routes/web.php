@@ -21,7 +21,7 @@ Route::controller(TarefaController::class)->group(function () {
     Route::post('/novo', 'store');
 });
 */
-Route::post('/novo', function (Request $request) {
-    return view('create');
+Route::get('/', function () {
+    return view('index');
 
 });
