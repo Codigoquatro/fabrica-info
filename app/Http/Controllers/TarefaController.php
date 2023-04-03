@@ -64,10 +64,7 @@ class TarefaController extends Controller
     }
 
     public function destroy($id_tarefa){
-        $cat=Tarefa::find($id_tarefa);
-    	if(isset($cat)) {
-            $cat->delete();
-        }
+        Tarefa::find($id_tarefa)->delete();
     	return Redirect::to('index');
     }
 }
