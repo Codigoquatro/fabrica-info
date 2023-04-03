@@ -1,31 +1,43 @@
 @extends('layouts.admin')
 @section('conteudo')
-<div class="card border">
-    <div class="card-body">
-        <form action="tarefa" method="POST">
-            @csrf
+<div class="row">
+		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+			<h3>Nova Categoria</h3>
+			@if (count($errors)>0)
+			<div class="alert alert-danger">
+				<ul>
+				@foreach ($errors->all() as $error)
+					<li>{{$error}}</li>
+				@endforeach
+				</ul>
+			</div>
+			@endif
+
+			{!!Form::open(array('url'=>'tarefa','method'=>'POST','autocomplete'=>'off'))!!}
+            {{Form::token()}}
             <div class="form-group">
-                <label for="Responsavel">Responsável</label>
-                <input type="text" class="form-control" name="Responavel" value="{{$cat->responsavel}}"
-                       id="Responsavel" placeholder="Responsavel">
+            	<label for="responsavel">Responsável</label>
+            	<input type="text" name="responsavel" class="form-control" placeholder="Responsável...">
+
+            </div>
+            <div class="form-group">
+            	<label for="descricao">Descrição</label>
+            	<input type="text" name="descricao" class="form-control" placeholder="Descrição...">
+            </div>
+	       <div>
+            	<label for="data_conclusao">Data Conclusão</label>
+            	<input type="date" name="data_conclusao" class="form-control" placeholder="Data Conclusão...">
             </div>
 
             <div class="form-group">
-                <label for="Descricao">Descrição</label>
-                <input type="text" class="form-control" name="descricao" value="{{$cat->descricao}}"
-                       id="descricao" placeholder="Descricao">
+            	<button class="btn btn-primary" type="submit">Salvar</button>
+            	<button class="btn btn-danger" type="reset">Cancelar</button>
             </div>
 
-            <div class="form-group">
-                <label for="data_conclusao">Data Conclusão</label>
-                <input type="text" class="form-control" name="data_conclusao" value="{{$cat->data_conclusao}}"
-                       id="data_conclusao" placeholder="data_conclusao">
-            </div>
-            <button type="submit" class="btn btn-primary btn-sm">Salvar</button>
-            <button type="cancel" class="btn btn-danger btn-sm">Cancel</button>
-        </form>
-    </div>
-</div>
+			{!!Form::close()!!}
 
-@endsection
+		</div>
+	</div>
+@stop
+
 
