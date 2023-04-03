@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/',TarefaController::class,'index');
+Route::get('/','index');
 
 
 
