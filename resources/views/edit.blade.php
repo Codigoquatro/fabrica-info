@@ -30,7 +30,7 @@
                 <div class="col-lg-6 col-sm-6 col-xs-12">
 	            	<div class="form-group">
 	            	<label for="nome">Descrição</label>
-	            	<input type="text" name="descrisao" required value="{{$tarefa->descricao}}" class="form-control" placeholder="Descrição...">
+	            	<input type="text" name="descricao" required value="{{$tarefa->descricao}}" class="form-control" placeholder="Descrição...">
 	            	</div>
             	</div>
 
