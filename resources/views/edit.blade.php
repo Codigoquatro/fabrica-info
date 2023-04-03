@@ -15,7 +15,7 @@
 		</div>
 </div>
 
-			{!!Form::model($tarefa, ['method'=>'PATCH', 'route'=>['tarefa.update', $cat->id_tarefa], 'files'=>'true'])!!}
+			{!!Form::model($cat ['method'=>'PATCH', 'route'=>['tarefa.update', $cat->id_tarefa], 'files'=>'true'])!!}
 			{{Form::token()}}
 
            <div class="row">
