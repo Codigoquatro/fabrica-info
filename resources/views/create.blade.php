@@ -24,13 +24,7 @@
             	<label for="descricao">Descrição</label>
             	<input type="text" name="descricao" class="form-control" placeholder="Descrição...">
             </div>
-            <div class="form-group">
-
-            	<button class="btn btn-primary" type="submit">Salvar</button>
-            	<button class="btn btn-danger" type="reset">Cancelar</button>
-            </div>
-		</div>
-	</div>
+	       <div>
             	<label for="data_conclusao">Data Conclusão</label>
             	<input type="date" name="data_conclusao" class="form-control" placeholder="Data Conclusão...">
             </div>
