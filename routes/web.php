@@ -17,8 +17,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::resource('tarefa',TarefaController::class)
-->middleware(['auth','verified']);
+Route::resource('tarefa',TarefaController::class);
+
 
 
 
