@@ -2,7 +2,7 @@
 @section('conteudo')
 <div class="card border">
     <div class="card-body">
-        <form action="/categorias/{{$cat->id}}" method="POST">
+        <form action="/categorias/{{$cat->id_tarefa}}" method="POST">
             @csrf
             <div class="form-group">
                 <label for="Responsavel">Responsável</label>
