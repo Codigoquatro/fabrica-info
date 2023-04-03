@@ -49,8 +49,9 @@ class TarefaController extends Controller
 
     public function edit($id_tarefa){
         $cat = Tarefa::find($id_tarefa);
-        return view("tarefa.edit",
-        ["tarefa"=>Tarefa::findOrFail($id_tarefa)]);
+        if(isset($cat)) {
+            return view('tarefa/{id_tarefa}/edit', compact('cat'));
+        }
     }
 
     public function update(Request $request, $id_tarefa){
