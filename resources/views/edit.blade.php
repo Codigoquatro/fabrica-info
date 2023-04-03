@@ -17,16 +17,16 @@
             {{Form::token()}}
             <div class="form-group">
             	<label for="responsavel">Responsável</label>
-            	<input type="text" name="responsavel" class="form-control" placeholder="Responsável...">
+            	<input type="text" name="responsavel" class="form-control" value="{{$cat->responsavel}}" placeholder="Responsável...">
 
             </div>
             <div class="form-group">
             	<label for="descricao">Descrição</label>
-            	<input type="text" name="descricao" class="form-control" placeholder="Descrição...">
+            	<input type="text" name="descricao" class="form-control" value="{{$cat->descricao}}" placeholder="Descrição...">
             </div>
 	       <div>
             	<label for="data_conclusao">Data Conclusão</label>
-            	<input type="date" name="data_conclusao" class="form-control" placeholder="Data Conclusão...">
+            	<input type="date" name="data_conclusao" class="form-control" value="{{$cat->data_conclusao}}"placeholder="Data Conclusão...">
             </div>
 
             <div class="form-group">
