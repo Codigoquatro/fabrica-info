@@ -93,7 +93,7 @@
               <ul class="treeview-menu">
                 <li><a href="{{route('tarefa.create')}}"><i class="fa fa-circle-o"></i> Cadastrar Tarefa</a></li>
                 <li><a href="{{route('tarefa.index')}}"><i class="fa fa-circle-o"></i> Listar Tarefa</a></li>
-                <li><a href="{{route('tarefa/{tarefa}/edit')}}"><i class="fa fa-circle-o"></i> Atualizar Tarefa</a></li>
+                <li><a href="{{route('tarefa.{tarefa}.edit')}}"><i class="fa fa-circle-o"></i> Atualizar Tarefa</a></li>
                 <li><a href="{{route('tarefa.destroy')}}"><i class="fa fa-circle-o"></i>Excluir Tarefa</a></li>
 
               </ul>
