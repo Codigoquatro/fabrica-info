@@ -17,7 +17,7 @@ return new class extends Migration
             $table->bigIncrements('id_tarefa');
             $table->string('responsavel');
             $table->string('descricao');
-            $table->timestamps();
+            $table->string('data_conclusao');
         });
     }
 
