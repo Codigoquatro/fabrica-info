@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::resource('tarefa',TarefaController::class);
-
+Route::resource('tarefa/{id_tarefa}','TarefaController@destroy');
 
 
 
