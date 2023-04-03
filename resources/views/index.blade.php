@@ -35,7 +35,7 @@
 			@endforeach
 			</table>
 		</div>
-		{{$tarefa->render()}}
+
 	</div>
 </div>
 @stop
