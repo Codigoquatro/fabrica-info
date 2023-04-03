@@ -15,5 +15,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::resource('tarefa', 'TarefaController');
+Route::resource('tarefa.index','TarefaController');
 
