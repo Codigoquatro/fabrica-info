@@ -21,4 +21,4 @@ Route::controller(TarefaController::class)->group(function () {
     Route::post('/novo', 'store');
 });
 */
-Route::resource('novo', TarefaController::class);
+Route::resource('create', TarefaController::class);
