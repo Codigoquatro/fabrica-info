@@ -52,13 +52,13 @@ class TarefaController extends Controller
         ["tarefa"=>Tarefa::findOrFail($id_tarefa)]);
     }
 
-    public function update(TarefaFormRequest $request, $id_tarefa){
+    public function update(Request $request, $id_tarefa){
         $tarefa=Tarefa::findOrFail($id_tarefa);
     	$tarefa->responsavel=$request->get('responsavel');
     	$tarefa->descricao=$request->get('descricao');
         $tarefa->descricao=$request->get('data_conclusao');
     	$tarefa->update();
-    	return Redirect::to('tarefa.index');
+    	return Redirect::to('tarefa/index');
     }
 
     public function destroy(){
