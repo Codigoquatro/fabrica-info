@@ -68,6 +68,6 @@ class TarefaController extends Controller
     	if(isset($cat)) {
             $cat->delete();
         }
-    	return Redirect::to('index');
+    	return view('delete', compact('cat'));
     }
 }
