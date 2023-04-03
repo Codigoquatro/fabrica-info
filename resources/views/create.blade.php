@@ -13,7 +13,7 @@
 			</div>
 			@endif
 
-			{!!Form::open(array('url'=>'create','method'=>'POST','autocomplete'=>'off'))!!}
+			{!!Form::open(array('url'=>'tarefa','method'=>'POST','autocomplete'=>'off'))!!}
             {{Form::token()}}
             <div class="form-group">
             	<label for="responsavel">Responsável</label>
