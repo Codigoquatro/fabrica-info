@@ -15,10 +15,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-/*
-Route::controller(TarefaController::class)->group(function () {
-    Route::get('/', 'index');
-    Route::post('/novo', 'store');
-});
-*/
-Route::get('/tarefa',[TarefaController::class,'index']);
+
+
+Route::get('/tarefa', [TarefaController::class, 'index']);
+
+
+
+
