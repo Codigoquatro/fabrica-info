@@ -63,7 +63,7 @@ class TarefaController extends Controller
     	return Redirect::to('tarefa/index');
     }
 
-    public function destroy(){
+    public function destroy($id_tarefa){
         $cat=Tarefa::find($id_tarefa);
     	if(isset($cat)) {
             $cat->delete();
