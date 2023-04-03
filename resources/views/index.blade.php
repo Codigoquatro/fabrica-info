@@ -28,7 +28,7 @@
                     <td>{{ $cat->data_conclusao}}</td>
 					<td>
                         <a href="/tarefa/{{$cat->id_tarefa}}/edit" class="btn btn-sm btn-primary">Editar</a>
-                       {{ Form::submit('Apagar', ['class'=>'bnt bnt-danger']) }}
+                        <a href="Apagar" class="btn btn-sm btn-danger">Apagar</a>
 					</td>
 				</tr>
 
