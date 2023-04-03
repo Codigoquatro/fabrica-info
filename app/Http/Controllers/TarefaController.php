@@ -28,7 +28,7 @@ class TarefaController extends Controller
     }
 
     public function create(){
-        return view('tarefa.create');
+        return view('create');
     }
 
     public function store(TarefaFormRequest $request){
@@ -37,7 +37,7 @@ class TarefaController extends Controller
         $tarefa->descricao=$request->get('descricao');
         $tarefa->data_conclusao=$request->get('data_conclusao');
         $tarefa->save();
-        return Redirect::to('tarefa.create');
+        return Redirect::to('index');
 
 
     }
