@@ -43,8 +43,7 @@ class TarefaController extends Controller
     }
 
     public function show($id_tarefa){
-        return view("show",
-        ["tarefa"=>Tarefa::findOrFail($id_tarefa)]);
+
     }
 
     public function edit($id_tarefa){
