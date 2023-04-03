@@ -3,6 +3,7 @@
 <div class="row">
 	<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
 		<h3>Lista de Tarefas <a href="tarefa/create"><button class="btn btn-success">Novo</button></a></h3>
+        @include('search')
 	</div>
 
 </div>
@@ -15,25 +16,26 @@
 			<table class="table table-striped table-bordered table-condensed table-hover">
 				<thead>
 					<th>Id</th>
-					<th>Responsavel</th>
+					<th>Nome</th>
 					<th>Descrição</th>
-					<th>Data Conclusão</th>
+					<th>Opções</th>
 				</thead>
-
+               @foreach ($tarefas as $cat)
 				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-                    <td></td>
+					<td>{{ $cat->id_tarefa}}</td>
+					<td>{{ $cat->responsavel}}</td>
+					<td>{{ $cat->descricao}}</td>
+                    <td>{{ $cat->data_conclusao}}</td>
 					<td>
-						<a href="#"><button class="btn btn-info">Editar</button></a>
-                         <a href="#" data-target="#" data-toggle="modal"><button class="btn btn-danger">Excluir</button></a>
+						<a href="{{URL::action('TarefaController@edit',$cat->id_tarefa)}}"><button class="btn btn-info">Editar</button></a>
+                         <a href="" data-target="#modal-delete-{{$cat->id_tarefa}}" data-toggle="modal"><button class="btn btn-danger">Excluir</button></a>
 					</td>
 				</tr>
-
+				@include('modal')
+				@endforeach
 			</table>
 		</div>
-
+		{{$tarefas->render()}}
 	</div>
 </div>
 @stop
